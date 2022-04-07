@@ -1,8 +1,8 @@
 package ru.asteises.mappers;
 
 import org.springframework.stereotype.Service;
-import ru.asteises.dto.HumanDTO;
-import ru.asteises.entity.Human;
+import ru.asteises.models.dto.HumanDTO;
+import ru.asteises.models.entity.Human;
 import ru.asteises.service.ProfessionService;
 
 @Service

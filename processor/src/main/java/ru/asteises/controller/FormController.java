@@ -1,11 +1,12 @@
 package ru.asteises.controller;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import ru.asteises.dto.LoginDTO;
-import ru.asteises.entity.Human;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import ru.asteises.models.dto.LoginDTO;
+import ru.asteises.models.entity.Human;
 import ru.asteises.service.HumanService;
 
 import java.util.List;

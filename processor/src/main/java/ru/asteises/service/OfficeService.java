@@ -1,10 +1,9 @@
 package ru.asteises.service;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.asteises.dto.OfficeDTO;
-import ru.asteises.entity.Office;
 import ru.asteises.mappers.OfficeMapper;
+import ru.asteises.models.dto.OfficeDTO;
+import ru.asteises.models.entity.Office;
 import ru.asteises.repository.OfficeRepository;
 
 @Service
@@ -15,7 +14,6 @@ public class OfficeService {
     public OfficeService(OfficeRepository officeRepository, OfficeMapper officeMapper) {
         this.officeRepository = officeRepository;
         this.officeMapper = officeMapper;
-
     }
 
     public Office setOffice(OfficeDTO officeDTO) {

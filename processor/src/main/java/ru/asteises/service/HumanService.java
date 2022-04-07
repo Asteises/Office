@@ -1,13 +1,12 @@
 package ru.asteises.service;
 
 import org.springframework.stereotype.Service;
-import ru.asteises.dto.HumanDTO;
-import ru.asteises.entity.Human;
 import ru.asteises.mappers.HumanMapper;
+import ru.asteises.models.dto.HumanDTO;
+import ru.asteises.models.entity.Human;
 import ru.asteises.repository.HumanRepository;
 
 import java.beans.Transient;
-import java.util.Collection;
 import java.util.List;
 
 @Service
@@ -20,7 +19,6 @@ public class HumanService {
         this.humanRepository = humanRepository;
         this.humanMapper = humanMapper;
         this.professionService = professionService;
-
     }
 
     public void setHuman(HumanDTO humanDTO) {

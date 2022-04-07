@@ -1,5 +1,6 @@
 server:
   port: 8080
+  url: http://localhost:8081
 
 logging:
   level:
@@ -12,5 +13,3 @@ spring:
     username: postgres
     password: postgres
     driver-class-name: org.postgresql.Driver
-#    schema: classpath*:database/initDB.sql
-#    initialization-mode: ALWAYS

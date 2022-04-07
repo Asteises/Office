@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import ru.asteises.dto.ProfessionDTO;
-import ru.asteises.entity.Profession;
+import ru.asteises.models.dto.ProfessionDTO;
+import ru.asteises.models.entity.Profession;
 import ru.asteises.service.ProfessionService;
 
 import java.util.List;

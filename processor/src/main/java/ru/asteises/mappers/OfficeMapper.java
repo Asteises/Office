@@ -1,9 +1,8 @@
 package ru.asteises.mappers;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.asteises.dto.OfficeDTO;
-import ru.asteises.entity.Office;
+import ru.asteises.models.dto.OfficeDTO;
+import ru.asteises.models.entity.Office;
 import ru.asteises.service.HumanService;
 
 @Service

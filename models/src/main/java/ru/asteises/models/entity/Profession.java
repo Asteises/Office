@@ -1,4 +1,4 @@
-package ru.asteises.entity;
+package ru.asteises.models.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

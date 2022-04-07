@@ -5,8 +5,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import ru.asteises.dto.OfficeDTO;
-import ru.asteises.entity.Office;
+import ru.asteises.models.dto.OfficeDTO;
+import ru.asteises.models.entity.Office;
 import ru.asteises.service.OfficeService;
 
 @Controller
