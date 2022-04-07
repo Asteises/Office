@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: WARN
+    ru: DEBUG
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/testSpring
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+#    schema: classpath*:database/initDB.sql
+#    initialization-mode: ALWAYS

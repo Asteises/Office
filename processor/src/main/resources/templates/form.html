@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!-- Объявление формата документа -->
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+<title>HTML Form testing</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+.wrapper {
+  background-color: whitesmoke;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 3px;
+}
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+.form-row > label {
+  padding: .5em 1em .5em 0;
+  flex: 1;
+}
+.form-row > input {
+  flex: 2;
+}
+.form-row > input,
+.form-row > button {
+  padding: .5em;
+}
+.form-row > button {
+  background: gray;
+  color: white;
+  border: 0;
+}
+
+
+</style>
+
+<body>
+
+<form action="/login" method="post">
+
+<ul class="wrapper">
+  <fieldset>
+    <legend align="right">Вход</legend>
+	<li class="form-row">
+    <p><label for="login">Login <em>* </em></label><input name="username" type="text" id="login"></p>
+	</li>
+	<li class="form-row">
+    <p><label for="email">E-mail </label><input name="email" type="email" id="email"></p>
+	</li>
+	<li class="form-row">
+		<p><label for="password">Password</label> <input name="password" type="password" id="password"></p>
+	</li>
+  </fieldset>
+<li class="form-row">
+<p><input type="submit" value="Отправить"></p>
+</li>
+</ul>
+</form>
+<br>
+<form>
+  <fieldset>
+    <legend align="right">Контактная информация</legend>
+	<li class="form-row">
+    <p><label for="name">ФИО: </label><input type="text" id="name"></p>
+	</li>
+	<li class="form-row">
+    <p><label for="phone">Телефон: </label><input type="tel" id="phone"></p>
+	</li>
+		<li class="form-row">
+    <p><label for="call-time">Прием звонков: </label><input type="time" id="call-time"></p>
+	</li>
+	<li class="form-row">
+    <p><label for="birdh-date">Дата рождения: </label><input type="date" id="birdh-date"></p>
+	</li>
+	<li class="form-row">
+    <p><label for="age">Возраст: </label><input type="number" min="18" max="99" step="1" id="age"></p>
+	</li>
+		<li class="form-row">
+    <p><label for="profession">Профессия: 
+	<select>
+	<option>None</option>
+	<option>Manager</option>
+	<option>Junior JAVA developer</option>
+	<option>Midl JAVA developer</option>
+	<option>Frontend developer</option>
+	<option>SEO</option>
+	</select>
+	</label></p>
+	</li>
+	<li class="form-row">
+    <p><label for="desc" >Комментарий: </label><textarea id="desc" rows="3" maxlength="350" placeholder="Ваш комментарий"></textarea></p>
+	</li>
+	<li class="form-row">
+    <p><label for="site">Сайт: </label><input type="url" id="site"></p>
+	</li>
+	<li class="form-row">
+    <p><label for="work-schedule">График работы: </label>
+	<br>
+	<input type="checkbox" id="work-schedule"> 10-19
+	<br>
+	<input type="checkbox" id="work-schedule"> 09-18
+	<br>
+	<input type="checkbox" id="work-schedule"> Свободный
+	</p>
+	</li>
+	<div>
+	<li class="form-row">
+	<p>Питание:</p>
+	</li>
+	<li class="form-row">
+    <p><label for="lunch1">С обедом</label>
+	<input type="radio" id="lunch1" name="lunch" value="get-lunch">
+	</p>
+	<p><label for="lunch2">Без обеда</label>
+	<input type="radio" id="lunch2" name="lunch" value="get-no-lunch">
+	</p>
+	</li>
+	</div>
+	
+	<p align="right">Что вам больше нравится?</p>
+	<li class="form-row">
+	<div>
+    <p><label for="comfort">Комфорт</label>
+	<input type="range" id="comfort" min="1" max="10"></p>
+	</div>
+	</li>
+	<li class="form-row">
+	<div>
+	<p><label for="money">Зарплата</label>
+	<input type="range" id="money" min="1" max="10"></p>
+	</div>
+	</li>
+	<li class="form-row">
+	<p><input type="submit" value="Подтвердить"></p>
+	</li>
+	<li class="form-row">
+	<p><input type="reset" value="Сбросить"></p>
+	</li>
+  </fieldset>
+ </ul>
+</form>
+</body>
+</html>
