@@ -22,6 +22,11 @@ public class ProfessionController {
         this.professionService = professionService;
     }
 
+    /**
+     *
+     * @param professionDTO
+     * @return
+     */
     @PostMapping("/profession")
     public ResponseEntity<ProfessionDTO> setProfession(@RequestBody ProfessionDTO professionDTO) {
         professionService.setProfession(professionDTO);
@@ -43,3 +48,4 @@ public class ProfessionController {
         return ResponseEntity.ok(professionService.getProfessionHighestSalary());
     }
 }
+//TODO Пройтись по проекту и написать комментарии через /**

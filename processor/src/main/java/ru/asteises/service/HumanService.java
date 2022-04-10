@@ -21,6 +21,10 @@ public class HumanService {
         this.professionService = professionService;
     }
 
+    /**
+     * adsadasdas
+     *
+     */
     public void setHuman(HumanDTO humanDTO) {
         Human human = humanMapper.dtoToEntity(humanDTO);
         humanRepository.save(human);

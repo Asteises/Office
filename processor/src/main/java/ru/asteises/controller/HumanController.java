@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.asteises.models.dto.HumanDTO;
 import ru.asteises.models.entity.Human;
 import ru.asteises.service.HumanService;
+import ru.asteises.service.RestService;
 
 import java.util.List;
 
@@ -14,9 +15,11 @@ import java.util.List;
 @Slf4j
 public class HumanController {
     private HumanService humanService;
+    private RestService restService;
 
-    public HumanController(HumanService humanService) {
+    public HumanController(HumanService humanService, RestService restService) {
         this.humanService = humanService;
+        this.restService = restService;
     }
 
     @PostMapping("/human")
@@ -44,4 +47,10 @@ public class HumanController {
     public ResponseEntity<List<Human>> getHumansByProfession(@PathVariable String profession) {
         return ResponseEntity.ok(humanService.getHumansByProfession(profession));
     }
+
+    @GetMapping("/human/random")
+    public ResponseEntity<Human> createRandomHuman() {
+        return ResponseEntity.ok(restService.getRandomHuman());
+    }
+
 }
