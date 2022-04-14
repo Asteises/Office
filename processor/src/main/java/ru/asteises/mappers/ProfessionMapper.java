@@ -1,8 +1,8 @@
 package ru.asteises.mappers;
 
 import org.springframework.stereotype.Service;
-import ru.asteises.models.dto.ProfessionDTO;
-import ru.asteises.models.entity.Profession;
+import ru.asteises.dto.ProfessionDTO;
+import ru.asteises.entity.Profession;
 
 @Service
 public class ProfessionMapper {

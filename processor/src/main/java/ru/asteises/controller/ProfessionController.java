@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import ru.asteises.models.dto.ProfessionDTO;
-import ru.asteises.models.entity.Profession;
+import ru.asteises.dto.ProfessionDTO;
+import ru.asteises.entity.Profession;
 import ru.asteises.service.ProfessionService;
+import ru.asteises.service.RestService;
 
 import java.util.List;
 
@@ -17,9 +18,11 @@ import java.util.List;
 @Slf4j
 public class ProfessionController {
     private ProfessionService professionService;
+    private RestService restService;
 
-    public ProfessionController(ProfessionService professionService) {
+    public ProfessionController(ProfessionService professionService, RestService restService) {
         this.professionService = professionService;
+        this.restService = restService;
     }
 
     /**
@@ -46,6 +49,11 @@ public class ProfessionController {
     @GetMapping("/profession/salary")
     public ResponseEntity<Profession> getProfessionBySalary() {
         return ResponseEntity.ok(professionService.getProfessionHighestSalary());
+    }
+
+    @GetMapping("/profession/random")
+    public ResponseEntity<Profession> getRandomProfession() {
+        return restService.getRandomProfession();
     }
 }
 //TODO Пройтись по проекту и написать комментарии через /**

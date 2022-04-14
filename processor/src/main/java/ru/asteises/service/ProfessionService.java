@@ -3,10 +3,11 @@ package ru.asteises.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.asteises.mappers.ProfessionMapper;
-import ru.asteises.models.dto.ProfessionDTO;
-import ru.asteises.models.entity.Profession;
+import ru.asteises.dto.ProfessionDTO;
+import ru.asteises.entity.Profession;
 import ru.asteises.repository.ProfessionRepository;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 

@@ -2,7 +2,7 @@ package ru.asteises.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ru.asteises.models.entity.Profession;
+import ru.asteises.entity.Profession;
 
 @Repository
 public interface ProfessionRepository extends JpaRepository<Profession, Long> {

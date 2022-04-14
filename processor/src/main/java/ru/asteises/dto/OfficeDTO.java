@@ -1,4 +1,4 @@
-package ru.asteises.models.dto;
+package ru.asteises.dto;
 
 import lombok.Data;
 

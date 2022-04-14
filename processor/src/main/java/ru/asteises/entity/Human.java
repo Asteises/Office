@@ -1,4 +1,4 @@
-package ru.asteises.models.entity;
+package ru.asteises.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
@@ -7,29 +7,31 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name="office")
+@Table(name = "human")
 @Getter
 @Setter
 @NoArgsConstructor
 @ToString
-public class Office {
+public class Human {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "human_id")
     private long id;
 
-    @Column(name = "address")
-    private String address;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "department")
-    private String department;
+    @Column(name = "surname")
+    private String surname;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "human_id", referencedColumnName = "id")
+    @Column(name = "age")
+    private int age;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "profession_id", referencedColumnName = "id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private List<Human> humans;
+    private Profession profession;
 }

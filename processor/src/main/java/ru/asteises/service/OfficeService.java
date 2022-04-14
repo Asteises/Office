@@ -2,8 +2,8 @@ package ru.asteises.service;
 
 import org.springframework.stereotype.Service;
 import ru.asteises.mappers.OfficeMapper;
-import ru.asteises.models.dto.OfficeDTO;
-import ru.asteises.models.entity.Office;
+import ru.asteises.dto.OfficeDTO;
+import ru.asteises.entity.Office;
 import ru.asteises.repository.OfficeRepository;
 
 @Service
